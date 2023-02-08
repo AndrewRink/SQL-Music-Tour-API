@@ -26,7 +26,6 @@ stages.get('/:name', async (req, res) => {
             include:{ 
                 model: Event, 
                 as: "events",
-                through: { attributes: [] }
             },
             order: [
                 [{ model: Event, as: "events" }, 'date', 'ASC'],
